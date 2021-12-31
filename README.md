@@ -21,16 +21,16 @@ services:
     networks:
       - net
     volumes:
-      - '/var/mcbe/servers:/opt/minecraft'
-      - '/var/www/admin:/var/www/html/ccadmin'
+     - '/share/04BRE/servers:/opt/minecraft'
+     - '/share/04BRE/admin:/var/www/html'
     ports:
-      - '19132:19132'
+      - '19132:19132/udp'
       - '19122:22'
       - '19143:8443'
     environment:
       MC_INSTANCE_NAME: ccmite
-      MCBE_VERSION: 1.18.2
-      MCBE_BUILD: 02
+      MCBE_VERSION: "1.18.2"
+      MCBE_BUILD: "03"
       LANG: ja-JP.UTF-8
     extra_hosts:
       - "ROUTER:192.168.0.1"
@@ -43,7 +43,7 @@ networks:
   net:
     name: net
     driver: bridge
-
+    external: true
 </pre>
 
 
