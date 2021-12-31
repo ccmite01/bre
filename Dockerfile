@@ -1,3 +1,4 @@
+FROM php:7.4.0-apache-buster
 LABEL maintainer="ccmite"
 WORKDIR /
 
