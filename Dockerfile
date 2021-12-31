@@ -10,6 +10,7 @@ RUN : "add package" && \
     screen \
     sudo \
     curl \
+    unzip \
     iproute2 \
     locales \
     ssh \

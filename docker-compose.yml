@@ -8,9 +8,8 @@ services:
     tty: true
     networks:
       - net
-        #    volumes:
-        #      - '/var/mcbe/servers:/opt/minecraft'
-        #      - '/var/www/admin:/var/www/html/ccadmin'
+    volumes:
+          - '/var/mcbe/servers:/opt/minecraft'
     ports:
       - '19132:19132'
       - '19122:22'
