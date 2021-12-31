@@ -1,0 +1,33 @@
+version: '2.2'
+services:
+# C.C.mite Server ###################################################
+  bre:
+    image: ccmite/jve:latest
+    container_name: bre
+    hostname: bre
+    tty: true
+    networks:
+      - net
+    volumes:
+      - '/var/mcbe/servers:/opt/minecraft'
+      - '/var/www/admin:/var/www/html/ccadmin'
+    ports:
+      - '19132:19132'
+      - '19122:22'
+      - '19143:8443'
+    environment:
+      MC_INSTANCE_NAME: ccmite
+      MCBE_VERSION: 1.18.2
+      MCBE_BUILD: 02
+      LANG: ja-JP.UTF-8
+    extra_hosts:
+      - "ROUTER:192.168.0.1"
+    mem_limit: 2g
+
+
+# bridge ###################################################
+
+networks:
+  net:
+    name: net
+    driver: bridge
