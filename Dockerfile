@@ -9,6 +9,7 @@ RUN : "add package" && \
     apt --allow-releaseinfo-change update && apt install -y \
     screen \
     sudo \
+    curl \
     iproute2 \
     locales \
     ssh \

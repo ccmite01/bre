@@ -2,7 +2,7 @@ version: '2.2'
 services:
 # C.C.mite Server ###################################################
   bre:
-    image: ccmite/jve:latest
+    image: ccmite/bre:latest
     container_name: bre
     hostname: bre
     tty: true
@@ -18,7 +18,7 @@ services:
     environment:
       MC_INSTANCE_NAME: ccmite
       MCBE_VERSION: 1.18.2
-      MCBE_BUILD: 02
+      MCBE_BUILD: 03
       LANG: ja-JP.UTF-8
     extra_hosts:
       - "ROUTER:192.168.0.1"
