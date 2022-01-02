@@ -25,4 +25,4 @@ touch /opt/minecraft/ssh/authorized_keys
 chown root:root /opt/minecraft/ssh/authorized_keys
 chmod 600 /opt/minecraft/ssh/authorized_keys
 /etc/init.d/ssh start
-screen -S mcs su -s /bin/bash - www-data -c "export TZ=JST-9; export LANG=ja_JP.UTF-8; cd /opt/minecraft/${MC_INSTANCE_NAME}; export LD_LIBRARY_PATH=.; ./bedrock_server"
+screen -S mcs su -s /bin/bash - www-data -c "export TZ=JST-9; export LANG=ja_JP.UTF-8; cd /opt/minecraft/${MC_INSTANCE_NAME}; export LD_LIBRARY_PATH=.; ./bedrock_server >log.txt 2>&1"
